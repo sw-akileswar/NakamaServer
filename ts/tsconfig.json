@@ -6,7 +6,8 @@
     "./messages.ts",
     "./match_handler.ts",
     "./match_rpc.ts",
-    "./ping.ts"
+    "./ping.ts",
+    "./lambda.ts"
   ],
   "compilerOptions": {
     "target": "es5",

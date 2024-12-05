@@ -15,6 +15,7 @@
 const rpcIdRewards = 'rewards_js';
 const rpcIdFindMatch = 'find_match_js2';
 const rpcIdPing = 'ping_js';
+const rpcIdLambda = 'execute_lambda_js';
 
 function InitModule(ctx: nkruntime.Context, logger: nkruntime.Logger, nk: nkruntime.Nakama, initializer: nkruntime.Initializer) {
     initializer.registerRpc(rpcIdRewards, rpcReward);
@@ -22,6 +23,8 @@ function InitModule(ctx: nkruntime.Context, logger: nkruntime.Logger, nk: nkrunt
     initializer.registerRpc(rpcIdFindMatch, rpcFindMatch);
 
     initializer.registerRpc(rpcIdPing, rpcPing);
+
+    initializer.registerRpc(rpcIdLambda, executeLambda);
 
     initializer.registerMatch(moduleName, {
         matchInit,
